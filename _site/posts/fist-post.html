@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+       <meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<title>영화 추천 프로그램 &#9642; homebrew마시는 햄스터</title>
+<!--
+<meta name="description" content="소개
+CGV와 메가박스의 리뷰를 크롤링해 정보를 조합하여 영화 추천을 하는 프로그램. 가볍게 토이 프로젝트를 진행함
+">
+-->
+<meta name="description" content="this should contain a proper description
+">
+<meta name="keywords" content="hello">
+<link rel="canonical" href="http://localhost:4000/posts/fist-post">
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="영화 추천 프로그램" />
+<meta name="twitter:description" content="this should contain a proper description
+" />
+<meta name="twitter:image" content="http://localhost:4000" />
+<meta name="author" content="">
+<link rel="author" href="">
+<meta property="og:locale" content="">
+<meta property="og:type" content="article">
+<meta property="og:title" content="영화 추천 프로그램">
+<meta property="og:description" content="this should contain a proper description
+">
+<meta property="og:url" content="http://localhost:4000/posts/fist-post">
+<meta property="og:site_name" content="homebrew마시는 햄스터">
+<link rel="stylesheet" href="/assets/vendor/normalize-css/normalize.css">
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik:400,400italic,700,700italic">
+<style>
+    html {
+      font-family: "Rubik", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+    }
+</style>
+<link rel="stylesheet" href="/assets/css/bf.css">
+   <body>
+       <div class="wrapper" id="blep">
+          <header>
+   <div class="menu">
+     <div class="logo">
+        <a href="/">homebrew마시는 햄스터</a>
+        <object type="image/svg+xml" data="/assets/img/dactl.svg" class="logosvg">Your browser does not support svg images</object>
+     </div>
+       <ul>
+           <li><a href="/about">about</a>
+           <li><a href="/archive">archive</a>
+       </ul>
+   </div>
+   <div class="social">
+     <ul>
+       <li>
+            <a href="https://youtube.com/youtube-user-name" target="_blank" class="smaller">
+              <span class="icon-youtube"></span>
+            </a>
+       <li>
+            <a href="https://stackoverflow.com/stackoverflow-user-name" target="_blank" class="smaller">
+              <span class="icon-stackoverflow"></span>
+            </a>
+       <li>
+            <a href="https://twitter.com/twitter-user-name" target="_blank" class="smaller">
+              <span class="icon-twitter"></span>
+            </a>
+       <li>
+            <a href="https://github.com/github-user-name" target="_blank" class="smaller">
+              <span class="icon-github"></span>
+            </a>
+       <li>
+            <a href="mailto:your@email.com" target="_blank">
+              <span class="icon-mail_outline"></span>
+            </a>
+       <li>
+            <a href="/feed.xml" target="_blank">
+                <span class="icon-rss_feed"></span>
+            </a>
+       <li>
+            <a href="#" onclick="switchTheme()" title="Switch theme?">
+              <span class="icon-invert_colors" id="theme-switcher"></span>
+            </a>
+     </ul>
+   </div>
+</header>
+<article class="post">
+<style>
+  .fist-post {
+    margin-bottom: 2em;
+  }
+  .fist-post::before {
+    background-image: url('assets/img/pom.jpeg');
+    background-size: cover;
+    -webkit-filter: grayscale(1) brightness(0.5) contrast(0.5);
+    content:'';
+    position:absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: -2;
+  }
+  .fist-post::after {
+    content:'';
+    position:absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(255,0,100,0.8);
+    /*mix-blend-mode: darken;
+    mix-blend-mode: color-burn;
+    mix-blend-mode: hard-light;*/
+    mix-blend-mode: overlay;
+    z-index: -1;
+  }
+  .fist-post-container,
+  .fist-post-container::before,
+  .fist-post-container::after {
+    height: 25rem;
+  }
+  .fist-post-bleed-container,
+  .fist-post-bleed-container::before,
+  .fist-post-bleed-container::after {
+    height: 35rem;
+  }
+    @media (max-width: 48rem) {
+        .fist-post-container,
+        .fist-post-container::before,
+        .fist-post-container::after{
+            height: 20rem;
+            margin-bottom: 3rem;
+        }
+    }
+</style>
+ <div class="post-title-container
+  fist-post fist-post-bleed-container bleed-hero-container
+    ">
+    <!--Post hero image source-->
+   <div class="heading-container hero-heading hero-heading-post">
+     <h1>
+          영화 추천 프로그램
+     </h1>
+     <div class="post-meta">
+        <span>10/03/2020</span>
+        <span>
+              <a href="/tag/hello">#hello</a>
+        </span>
+     </div>
+   </div>
+ </div>
+   <h2 id="소개">소개</h2>
+<p>CGV와 메가박스의 리뷰를 크롤링해 정보를 조합하여 영화 추천을 하는 프로그램. 가볍게 토이 프로젝트를 진행함
+<p>
+<h2 id="기획-의도">기획 의도</h2>
+<p>영화를 보기전에 네이버 영화 리뷰를 참고하는데, 최신순 리뷰의 페이지마다 댓글 알바가 판이 친다는 리뷰는 꼭 하나씩 달려있었다. 정작 많은 사람들의 공감을 받은 리뷰글들이 알바들이 쓴 것이면 어떡하지란 의심이 들기 시작했다.
+<h2 id="흐름도-작성">흐름도 작성</h2>
+<p><img src="/assets/img/movie_recommand/flow.png" alt="title" width="80%" height="80%" />
+</article>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'dactl';
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+<aside class="related">
+<h2>Related posts</h2>
+<ul class="related-posts">
+</aside>
+           <footer>
+    <span>this should contain a proper description
+</span>
+    <span>written by Your Name</span>
+</footer>
+       </div>
+<script type="text/javascript" src="/assets/js/theme.js"></script>
+<script type="text/javascript" src="/assets/js/barefoot.js"></script>
+    

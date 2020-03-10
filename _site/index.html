@@ -80,6 +80,79 @@
 </header>
 <article class="blog">
 <style>
+  .fist-post {
+    margin-bottom: 2em;
+  }
+  .fist-post::before {
+    background-image: url('assets/img/pom.jpeg');
+    background-size: cover;
+    -webkit-filter: grayscale(1) brightness(0.5) contrast(0.5);
+    content:'';
+    position:absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: -2;
+  }
+  .fist-post::after {
+    content:'';
+    position:absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(255,0,100,0.8);
+    /*mix-blend-mode: darken;
+    mix-blend-mode: color-burn;
+    mix-blend-mode: hard-light;*/
+    mix-blend-mode: overlay;
+    z-index: -1;
+  }
+  .fist-post-container,
+  .fist-post-container::before,
+  .fist-post-container::after {
+    height: 25rem;
+  }
+  .fist-post-bleed-container,
+  .fist-post-bleed-container::before,
+  .fist-post-bleed-container::after {
+    height: 35rem;
+  }
+    @media (max-width: 48rem) {
+        .fist-post-container,
+        .fist-post-container::before,
+        .fist-post-container::after{
+            height: 20rem;
+            margin-bottom: 3rem;
+        }
+    }
+</style>
+ <div class="
+    post-title-container
+        fist-post fist-post-container hero-hov
+  ">
+   <div class="heading-container hero-heading hero-heading-blog">
+     <h1>
+          <a href="/posts/fist-post" title="영화 추천 프로그램">영화 추천 프로그램</a>
+     </h1>
+     <div class="
+        post-meta
+      ">
+        <span>10/03/2020</span>
+        <span>
+              <a href="/tag/hello">#hello</a>
+        </span>
+     </div>
+   </div>
+ </div>
+     <h2 id="소개">소개</h2>
+<p>CGV와 메가박스의 리뷰를 크롤링해 정보를 조합하여 영화 추천을 하는 프로그램. 가볍게 토이 프로젝트를 진행함
+       <div class="readmore">
+          <a href="/posts/fist-post" role="button">Read more</a>
+       <div>
+</article>
+ <hr>
+<article class="blog">
+<style>
   .welcome-to-dactl {
     margin-bottom: 2em;
   }
@@ -381,81 +454,6 @@ You need to add a correct class <strong>after</strong> the paragraph:
 </div>
        <div class="readmore">
           <a href="/posts/yaml-frontmatter" role="button">Read more</a>
-       <div>
-</article>
- <hr>
-<article class="blog">
-<style>
-  .tags-in-dactyl {
-    margin-bottom: 2em;
-  }
-  .tags-in-dactyl::before {
-    background-image: url('https://source.unsplash.com/collection/427433/');
-    background-size: cover;
-    -webkit-filter: grayscale(1) brightness(0.5) contrast(0.5);
-    content:'';
-    position:absolute;
-    width: 100%;
-    left: 0;
-    top: 0;
-    z-index: -2;
-  }
-  .tags-in-dactyl::after {
-    content:'';
-    position:absolute;
-    width: 100%;
-    left: 0;
-    top: 0;
-    background-color: rgba(100,255,0,0.8);
-    /*mix-blend-mode: darken;
-    mix-blend-mode: color-burn;
-    mix-blend-mode: hard-light;*/
-    mix-blend-mode: overlay;
-    z-index: -1;
-  }
-  .tags-in-dactyl-container,
-  .tags-in-dactyl-container::before,
-  .tags-in-dactyl-container::after {
-    height: 25rem;
-  }
-  .tags-in-dactyl-bleed-container,
-  .tags-in-dactyl-bleed-container::before,
-  .tags-in-dactyl-bleed-container::after {
-    height: 35rem;
-  }
-    @media (max-width: 48rem) {
-        .tags-in-dactyl-container,
-        .tags-in-dactyl-container::before,
-        .tags-in-dactyl-container::after{
-            height: 20rem;
-            margin-bottom: 3rem;
-        }
-    }
-</style>
- <div class="
-    post-title-container
-        tags-in-dactyl tags-in-dactyl-container hero-hov
-  ">
-   <div class="heading-container hero-heading hero-heading-blog">
-     <h1>
-          <a href="/posts/tags-in-dactyl" title="Tags in dactl">Tags in dactl</a>
-     </h1>
-     <div class="
-        post-meta
-      ">
-        <span>18/03/2017</span>
-        <span>
-              <a href="/tag/dactl">#dactl</a>
-              <a href="/tag/howto">#howto</a>
-        </span>
-     </div>
-   </div>
- </div>
-     <p class="lead">Tags are built using Jekyll’s native categories functionality and you need to add them manually as files before using them in posts. Read on to learn how.
-<h2 id="how-to-add-a-new-tag">How to add a new tag</h2>
-<p>Please make sure to do the following for each tag:
-       <div class="readmore">
-          <a href="/posts/tags-in-dactyl" role="button">Read more</a>
        <div>
 </article>
 <nav class="pagination" role="navigation">

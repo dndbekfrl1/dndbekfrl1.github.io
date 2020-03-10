@@ -6,9 +6,33 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 03 Mar 2020 03:47:34 +0900</pubDate>
-    <lastBuildDate>Tue, 03 Mar 2020 03:47:34 +0900</lastBuildDate>
+    <pubDate>Wed, 11 Mar 2020 02:27:05 +0900</pubDate>
+    <lastBuildDate>Wed, 11 Mar 2020 02:27:05 +0900</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
+    
+      <item>
+        <title>영화 추천 프로그램</title>
+        <description>&lt;h2 id=&quot;소개&quot;&gt;소개&lt;/h2&gt;
+&lt;p&gt;CGV와 메가박스의 리뷰를 크롤링해 정보를 조합하여 영화 추천을 하는 프로그램. 가볍게 토이 프로젝트를 진행함&lt;/p&gt;
+
+&lt;p&gt;&amp;lt;!–-break-–&amp;gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;기획-의도&quot;&gt;기획 의도&lt;/h2&gt;
+&lt;p&gt;영화를 보기전에 네이버 영화 리뷰를 참고하는데, 최신순 리뷰의 페이지마다 댓글 알바가 판이 친다는 리뷰는 꼭 하나씩 달려있었다. 정작 많은 사람들의 공감을 받은 리뷰글들이 알바들이 쓴 것이면 어떡하지란 의심이 들기 시작했다.&lt;/p&gt;
+
+&lt;h2 id=&quot;흐름도-작성&quot;&gt;흐름도 작성&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/movie_recommand/flow.png&quot; alt=&quot;title&quot; width=&quot;80%&quot; height=&quot;80%&quot; /&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 10 Mar 2020 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/posts/fist-post</link>
+        <guid isPermaLink="true">http://localhost:4000/posts/fist-post</guid>
+        
+        <category>hello</category>
+        
+        
+      </item>
     
       <item>
         <title>Welcome to dactl!</title>
