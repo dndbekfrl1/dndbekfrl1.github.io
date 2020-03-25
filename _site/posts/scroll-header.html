@@ -4,17 +4,19 @@
        <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-<title>Welcome to dactl! &#9642; homebrew마시는 햄스터</title>
+<title>스크롤 헤더 &#9642; homebrew마시는 햄스터</title>
 <!--
-<meta name="description" content="You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve.
+<meta name="description" content="스크롤 값에 따라 반응하는 헤더
+많은 시도와 구글링 끝에 원하는 모양을 만들 수 있었다.
+내가 원하는 모양은 살짝 스크롤을 내린 후에 상단에 고정된 헤더이다.
 ">
 -->
 <meta name="description" content="this should contain a proper description
 ">
-<meta name="keywords" content="dactl, jekyll">
-<link rel="canonical" href="http://localhost:4000/posts/welcome-to-dactl">
+<meta name="keywords" content="css, jquery, html">
+<link rel="canonical" href="http://localhost:4000/posts/scroll-header">
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Welcome to dactl!" />
+<meta name="twitter:title" content="스크롤 헤더" />
 <meta name="twitter:description" content="this should contain a proper description
 " />
 <meta name="twitter:image" content="http://localhost:4000" />
@@ -22,10 +24,10 @@
 <link rel="author" href="">
 <meta property="og:locale" content="">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Welcome to dactl!">
+<meta property="og:title" content="스크롤 헤더">
 <meta property="og:description" content="this should contain a proper description
 ">
-<meta property="og:url" content="http://localhost:4000/posts/welcome-to-dactl">
+<meta property="og:url" content="http://localhost:4000/posts/scroll-header">
 <meta property="og:site_name" content="homebrew마시는 햄스터">
 <link rel="stylesheet" href="/assets/vendor/normalize-css/normalize.css">
 <link rel="stylesheet" href="/assets/css/main.css">
@@ -84,11 +86,11 @@
 </header>
 <article class="post">
 <style>
-  .welcome-to-dactl {
+  .scroll-header {
     margin-bottom: 2em;
   }
-  .welcome-to-dactl::before {
-    background-image: url('https://source.unsplash.com/collection/430471/');
+  .scroll-header::before {
+    background-image: url('assets/img/pom.jpeg');
     background-size: cover;
     -webkit-filter: grayscale(1) brightness(0.5) contrast(0.5);
     content:'';
@@ -98,7 +100,7 @@
     top: 0;
     z-index: -2;
   }
-  .welcome-to-dactl::after {
+  .scroll-header::after {
     content:'';
     position:absolute;
     width: 100%;
@@ -111,60 +113,85 @@
     mix-blend-mode: overlay;
     z-index: -1;
   }
-  .welcome-to-dactl-container,
-  .welcome-to-dactl-container::before,
-  .welcome-to-dactl-container::after {
+  .scroll-header-container,
+  .scroll-header-container::before,
+  .scroll-header-container::after {
     height: 25rem;
   }
-  .welcome-to-dactl-bleed-container,
-  .welcome-to-dactl-bleed-container::before,
-  .welcome-to-dactl-bleed-container::after {
+  .scroll-header-bleed-container,
+  .scroll-header-bleed-container::before,
+  .scroll-header-bleed-container::after {
     height: 35rem;
   }
     @media (max-width: 48rem) {
-        .welcome-to-dactl-container,
-        .welcome-to-dactl-container::before,
-        .welcome-to-dactl-container::after{
+        .scroll-header-container,
+        .scroll-header-container::before,
+        .scroll-header-container::after{
             height: 20rem;
             margin-bottom: 3rem;
         }
     }
 </style>
  <div class="post-title-container
-  welcome-to-dactl welcome-to-dactl-bleed-container bleed-hero-container
+  scroll-header scroll-header-bleed-container bleed-hero-container
     ">
     <!--Post hero image source-->
    <div class="heading-container hero-heading hero-heading-post">
      <h1>
-          Welcome to dactl!
+          스크롤 헤더
      </h1>
      <div class="post-meta">
-        <span>22/03/2017</span>
+        <span>26/03/2020</span>
         <span>
-              <a href="/tag/dactl">#dactl</a>
-              <a href="/tag/jekyll">#jekyll</a>
+              <a href="/tag/css">#css</a>
+              <a href="/tag/jquery">#jquery</a>
+              <a href="/tag/html">#html</a>
         </span>
      </div>
    </div>
  </div>
-   <p class="lead">You’ll find this post in your <code class="highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="highlighter-rouge">jekyll serve</code>.
+   <h2 id="스크롤-값에-따라-반응하는-헤더">스크롤 값에 따라 반응하는 헤더</h2>
+<p>많은 시도와 구글링 끝에 원하는 모양을 만들 수 있었다.
+내가 원하는 모양은 살짝 스크롤을 내린 후에 상단에 고정된 헤더이다.
 <p>
-This launches a web server and auto-regenerates your site when a file is updated.<br />
-To add new posts, simply add a file in the <code class="highlighter-rouge">_posts</code> directory that follows the convention <code class="highlighter-rouge">YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
-<p>Jekyll also offers powerful support for code snippets:
-<div class="language-ruby highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<p>나와 비슷한 사람들이 고통받지 않길 바라며 작성했다. ㅎㅎ
+<h2 id="문제점과-해결방법">문제점과 해결방법</h2>
+<ul>
+<li>스크롤 값을 어떻게 받는가?<br />
+-&gt; jquery의 scrollTop()메서드를 사용해 console창에 스크롤 값을 확인하고 조정했다.
+<li>header를 fixed로 고정하면 다른 요소들과 겹침 현상이 발생했다.
+<br />-&gt; header에 z-index값을 추가했다.
+</ul>
+<h2 id="전체-소스">전체 소스</h2>
+<p>살짝 어긋나는게 있지만 너무 졸려서 다음에 수정하겠음…
+<p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="dndbekfrl1" data-slug-hash="NWqEGmQ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="NWqEGmQ">
+  <span>See the Pen <a href="https://codepen.io/dndbekfrl1/pen/NWqEGmQ">
+  NWqEGmQ</a> by dndbekfrl1 (<a href="https://codepen.io/dndbekfrl1">@dndbekfrl1</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+<script async="" src="https://static.codepen.io/assets/embed/ei.js"></script>
+<h2 id="코드-복습">코드 복습</h2>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
 3
 4
-5</pre><td class="code"><pre><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
-<span class="k">end</span>
-<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
-<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span>
+5
+6
+7
+8</pre><td class="code"><pre><span class="nx">$</span><span class="p">(</span><span class="nb">window</span><span class="p">).</span><span class="nx">scroll</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+            <span class="kd">var</span> <span class="nx">scrollTop</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">scrollTop</span><span class="p">();</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nx">scrollTop</span> <span class="o">&gt;=</span> <span class="mi">80</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">$</span><span class="p">(</span><span class="s2">".tab-list"</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s2">"on"</span><span class="p">);</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="nx">$</span><span class="p">(</span><span class="s2">".tab-list"</span><span class="p">).</span><span class="nx">removeClass</span><span class="p">(</span><span class="s2">"on"</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">});</span>
 </pre></table>
 </div>
 </div>
-<p>Check out the <a href="http://jekyllrb.com">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://github.com/jekyll/jekyll-help">Jekyll’s dedicated Help repository</a>.
+<p>현재 스크롤 값이 원하는 scrollTop값보다 크다면(스크롤 바를 내리면) ‘on’ 클래스를 추가하거나 삭제하거나 원하는 값을 주면 된다!
+<p><br />
+<br />
+겹침현상을 어떻게 해결하는지 몰라서 굉장히 골아팠던 시간이였다. z-index쓰고 편안해지자
 </article>
 <div id="disqus_thread"></div>
 <script type="text/javascript">
@@ -181,21 +208,6 @@ To add new posts, simply add a file in the <code class="highlighter-rouge">_post
 <aside class="related">
 <h2>Related posts</h2>
 <ul class="related-posts">
-   <li>
-    <a href="/posts/config-settings">
-        <span>Layout settings and more in _config.yml</span>
-        <small>20/03</small>
-    </a>
-   <li>
-    <a href="/posts/yaml-frontmatter">
-        <span>YAML front matter in posts</span>
-        <small>19/03</small>
-    </a>
-   <li>
-    <a href="/posts/example-content">
-        <span>Example content</span>
-        <small>20/01</small>
-    </a>
 </aside>
            <footer>
     <span>this should contain a proper description
