@@ -1,6 +1,6 @@
 {
-  "short_name": "당신의 숙제",
-  "name": "당신의 숙제",
+  "short_name": "React App",
+  "name": "Create React App Sample",
   "icons": [
     {
       "src": "favicon.ico",
